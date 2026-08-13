@@ -56,33 +56,42 @@ coral_cover_pct
 
 
 
-
 # STEP 4: Loop over time. Call your iterator `t`. You've already calculated 
 # percent cover for the first year, so start your sequence at 2. Fill in the 
 # blank below.
-for (_________) {
+
+for(t in 1:length(coral_cover_pct)){
+  coral_cover_pct[t]<-mean(reef)
+}
+coral_cover_pct
+
   # STEP 5: Update current and previous reef
   # Copy reef to a new variable, prev_reef
-  prev_reef <- _________
+  prev_reef <- 
   # Wipe the new reef clean
-  reef <- _________
+  reef <- coral_cover_pct[1]<-1
+      for (t in 1:length(coral_cover_pct)) {
+      coral_cover_pct[t]<-mean(reef)}
+      coral_cover_pct
 
   # STEP 6: Loop over the rows and columns. Call your iterators r and c.
-  for (_________) {
-    for (_________) {
+  for (r in 1:length(coral_cover_pct)) {
+    for (c in length(coral_cover_pct)) {
+      print(paste(r, c, sep = ","))print(reef(r,c))}}
+
 
       # STEP 7: Check for coral
       # Check if this cell had a coral in it in the previous reef
-      if (_________) {
+      if (random_coral=1) {
         print(paste("Coral found at", r, c))
         
         # STEP 8: Determine coral's fate
         
         # Roll 2d6 for this coral
-        coral_outcome <- _________
+        coral_outcome <- "Coral found at"
         # Fill in the conditions below for mortality and survival
         # Update the reef accordingly
-        if (_________) {
+        if (roll2d6<=3) {
           # Mortality
           print("Coral died")
           # Update the reef
@@ -94,7 +103,7 @@ for (_________) {
       }
     }
   }
-  print(paste("year:", years[t]))
+  print(paste("year:year", years[t]))
   print(reef)
 
   # STEP 9: Update coral_cover_pct
@@ -105,4 +114,4 @@ coral_cover_pct
 #  [1] 0.32 0.32 0.32 0.32 0.32 0.32 0.24 0.20 0.16 0.16 0.12
 
 
-#
+###
