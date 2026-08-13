@@ -45,13 +45,16 @@ coral_cover_pct
 # Hint: reef is all 1's and 0's, so the mean of the reef equals the percent cover.
 
 
-mean(1:8,coral_cover_pct)
+mean(reef)
 
-
+coral_cover_pct[1]<-mean(reef)
+coral_cover_pct
 
 # Your coral cover percent should be:
 # > coral_cover_pct
 #  [1] 0.32 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+
+
 
 
 # STEP 4: Loop over time. Call your iterator `t`. You've already calculated 
